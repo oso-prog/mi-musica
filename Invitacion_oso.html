@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación Pokémon</title>
+    <title>Invitación Pokémon - Ostin Sanchez</title>
     <style>
         body {
             background-image: url('https://img2.wallspic.com/crops/0/7/7/2/5/152770/152770-anime-pikachu-pokemon_go-android-arte-1080x1920.jpg');
@@ -71,7 +71,7 @@
             border: 10px solid #333;
             border-radius: 50%;
             position: absolute;
-            bottom: -45px; /* Mitad arriba, mitad abajo */
+            bottom: -45px;
             left: 50%;
             transform: translateX(-50%);
             z-index: 110;
@@ -82,8 +82,6 @@
             align-items: center;
             transition: transform 0.3s;
         }
-
-        .center-button:active { transform: translateX(-50%) scale(0.9); }
 
         .center-button::after {
             content: "TAP";
@@ -133,6 +131,22 @@
             transform: scale(1);
         }
 
+        .header-box {
+            background-color: #ff1c1c;
+            padding: 20px;
+            color: white;
+            border-bottom: 6px solid #333;
+        }
+
+        .birthday-name {
+            display: block;
+            font-size: 1.8rem;
+            color: #ffcb05; /* Dorado Pokémon */
+            text-shadow: 3px 3px #2a75bb; /* Borde Azul Pokémon */
+            margin-top: 5px;
+            font-weight: 900;
+        }
+
         .content { padding: 30px 20px 20px; color: #333; }
         .content h2 { color: #2a75bb; margin-bottom: 10px; }
         .info-box { background-color: rgba(255, 203, 5, 0.1); border: 2px dashed #ffcb05; padding: 15px; border-radius: 15px; margin-top: 15px; }
@@ -158,8 +172,9 @@
     </audio>
 
     <div class="card">
-        <div style="background-color: #ff1c1c; padding: 20px; color: white; border-bottom: 6px solid #333;">
-            <h1 style="margin: 0; font-size: 1.4rem; text-shadow: 2px 2px #333;">¡TE ELIJO A TI!</h1>
+        <div class="header-box">
+            <h1 style="margin: 0; font-size: 1.1rem; text-shadow: 2px 2px #333; text-transform: uppercase;">¡Te elijo a ti para el cumple de!</h1>
+            <span class="birthday-name">OSTIN SANCHEZ</span>
         </div>
 
         <div class="content">
@@ -168,26 +183,24 @@
             
             <div class="info-box">
                 <p>📅 14 de Marzo</p>
-                <p>⏰ 2:30:00 PM</p>
+                <p>⏰ 2:30 PM</p>
                 <p>📍 GIMNASIO: Primera circunvalacion y pachacutec</p>
                 <a href="https://maps.app.goo.gl/WJQD3EDJ8QnQxqP98" target="_blank" class="btn-location">📍 VER UBICACIÓN</a>
             </div>
 
-            <a href="https://wa.me/59165407099?text=¡Asistencia%20confirmada!%20Allí%20estaré." class="btn-confirm" target="_blank">
+            <a href="https://wa.me/59170416454?text=¡Asistencia%20confirmada!%20Allí%20estaré%20en%20el%20cumple%20de%20Ostin." class="btn-confirm" target="_blank">
                 ¡CONFIRMAR ASISTENCIA!
             </a>
         </div>
 
-        <div class="footer">¡TRAE TUS MEJORES ANIMOS!</div>
+        <div class="footer">¡TRAE TUS MEJORES ÁNIMOS!</div>
     </div>
 
     <script>
         function openInvitation() {
-            // Animación de apertura
             document.getElementById('cover').classList.add('opened');
             document.getElementById('mainBody').classList.add('show-card');
             
-            // Iniciar música
             var audio = document.getElementById("bg-music");
             audio.play();
         }
